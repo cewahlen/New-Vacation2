@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6 Buttons in 2 Rows of 3</title>
+    <style>
+      /* Container for the buttons */
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 10px; /* space between buttons */
+        max-width: 400px; /* optional: limit width */
+        margin: 20px auto; /* center horizontally */
+      }
+
+      /* Button styling */
+      .button-grid button {
+        padding: 12px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .button-grid button:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-grid">
+      <button onclick="addHTML('You clicked Button 1!')">Vacation</button><a
+    href="Vacation.html"
+      </a>
+      <button onclick="addHTML('You clicked Button 2!')">Transportation</button><a
+    href="Transportation page.html"
+      </a>
+      <button onclick="addHTML('You clicked Button 3!')">Button 3</button>
+      <button onclick="addHTML('You clicked Button 4!')">Button 4</button>
+      <button onclick="addHTML('You clicked Button 5!')">Button 5</button>
+      <button onclick="addHTML('You clicked Button 6!')">Button 6</button>
+    </div>
+
+    <script>
+      // Function to add HTML to the output div
+      function addHTML(content) {
+        const outputDiv = document.getElementById("Vacation.html");
+        outputDiv.innerHTML = `<strong>${content}</strong>`;
+      }
+    </script>
+  </body>
+</html>

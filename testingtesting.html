@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF - 8" />
+    <meta name="viewport" content="width=device - width, initial - scale=1.0" />
+    <title>Multiple Photos Next to Text using CSS Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .photos {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="photos">
+        <img src="photo1.jpg" alt="Photo 1" />
+        <img src="photo2.jpg" alt="Photo 2" />
+      </div>
+      <p>
+        This is some text that goes along with the photos. The CSS Grid layout
+        allows for precise control over the placement of the photos and the
+        text.
+      </p>
+    </div>
+  </body>
+</html>

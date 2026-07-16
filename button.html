@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML in Button Example</title>
+    <style>
+      /* Basic button styling */
+      .custom-btn {
+        display: inline-flex; /* Allows icon + text alignment */
+        align-items: center;
+        gap: 8px; /* Space between icon and text */
+        padding: 10px 16px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        margin: 50px 100px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .custom-btn:hover {
+        background-color: #45a049;
+      }
+
+      /* Icon styling */
+      .custom-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Optional: style text separately */
+      .custom-btn span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Button with HTML content -->
+    <button class="custom-btn">
+      <a href="Vacation.html" class="custom-btn">
+        <span>Home</span>
+      </a>
+    </button>
+  </body>
+</html>
