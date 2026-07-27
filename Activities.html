@@ -11,7 +11,7 @@
         background-repeat: no-repeat;
         background-position: center;
       }
-     .custom-btn {
+      .custom-btn {
         display: inline-flex; /* Allows icon + text alignment */
         align-items: center;
         gap: 8px; /* Space between icon and text */
@@ -25,7 +25,7 @@
         transition: background-color 0.3s ease;
         text-decoration: none; /* Remove underline from link */
       }
-      
+
       /* Hover effect */
       .custom-btn:hover {
         background-color: #45a049;
@@ -41,41 +41,106 @@
       .custom-btn span {
         font-weight: bold;
       }
+      .image-container {
+        float: left;
+        display: block;
+        margin: 20px 100px;
+        max-width: 500px;
+        border-radius: 10px;
+      }
     </style>
   </head>
   <body>
+    <a href="index.html" class="custom-btn top-left-btn">
+      <span>Home</span>
+    </a>
     <h1
       style="
         font-family: &quot;Courier New&quot;, Courier, monospace;
         font-size: 100px;
         color: black;
         margin: 40px;
-        text-align: left
-    ""
-        >
-      
+        text-align: left;
+      "
+    >
       Activities
-      </h1>
-      <a href="Vacation.html" class="custom-btn top-left-btn">
-  <span>Home</span>
-</a>
+    </h1>
+
     <p
       style="
         font-family: &quot;Courier New&quot;, Courier, monospace;
-        font-size: 20px;
+        font-size: 30px;
         color: white;
         font-weight: bold;
-        margin: 50px 100px;
+        margin: 20px 100px;
         max-width: 500px;
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 20px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners */
       "
     >
-      We explored the city's famous landmarks, including the Chelsea
-      Market and Times Square. We also visited the 9\11 Memorial, which provided
-      a rich cultural experience.
+      We explored the city's famous landmarks, including the Chelsea Market and
+      Times Square. We also visited the 9\11 Memorial, which provided a rich
+      cultural experience.
     </p>
+
+    <div class="image-container">
+      <img src="timessquare.jpg" alt="New York City" width="400" />
+    </div>
+
+    <p
+      style="
+        font-family: &quot;Courier New&quot;, Courier, monospace;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        margin: 20px 100px;
+        max-width: 500px;
+        background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
+        padding: 20px; /* space inside rectangle */
+        border-radius: 10px; /* optional rounded corners */
+      "
+    >
+      <a
+        href="https://www.timessquarenyc.org"
+        style="color: #ffd700; text-decoration: none"
+      >
+        Times Square
+      </a>
+      is a major commercial intersection, tourist destination, entertainment
+      center, and neighborhood in Midtown Manhattan.
+    </p>
+
+    <img
+      src="Chelsea-Market-1-1024x683.jpg"
+      alt="New York City"
+      style="
+        display: block;
+        margin: 20px 100px;
+        max-width: 500px;
+        border-radius: 10px;
+      "
+    />
+    <img
+      src="faoschwartz.jpg"
+      alt="New York City"
+      style="
+        display: block;
+        margin: 20px 100px;
+        max-width: 500px;
+        border-radius: 10px;
+      "
+    />
+    <img
+      src="timessquare2.jpg"
+      alt="New York City"
+      style="
+        display: block;
+        margin: 20px 100px;
+        max-width: 500px;
+        border-radius: 10px;
+      "
+    />
     <img
       src="timessquare.jpg"
       alt="New York City"
@@ -116,5 +181,13 @@
         border-radius: 10px;
       "
     />
+    <div class="image-container">
+      <img src="citibike.jpg" alt="Sample Image" width="200" />
+    </div>
+
+    <p>
+      This is some sample text that will appear next to the image. The float
+      property allows the text to wrap around the image
+    </p>
   </body>
 </html>
