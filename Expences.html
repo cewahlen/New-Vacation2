@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expences</title>
+    <style>
+      body {
+        background-image: url("new-york-city-skyline-.jpg");
+        background-size: cover; /* makes the image fill the screen */
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .custom-btn {
+        display: inline-flex; /* Allows icon + text alignment */
+        align-items: center;
+        gap: 8px; /* Space between icon and text */
+        padding: 10px 16px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none; /* Remove underline from link */
+      }
+
+      /* Hover effect */
+      .custom-btn:hover {
+        background-color: #45a049;
+      }
+
+      /* Icon styling */
+      .custom-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Optional: style text separately */
+      .custom-btn span {
+        font-weight: bold;
+      }
+      .image-container {
+        float: left;
+        display: block;
+        margin: 20px 100px;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="custom-btn top-left-btn">
+      <span>Home</span>
+    </a>
+
+    <h1
+      style="
+        font-family: &quot;Courier New&quot;, Courier, monospace;
+        font-size: 80px;
+        color: white;
+        margin: 40px;
+        text-align: left;
+      "
+    >
+      Expences
+    </h1>
+    <p
+      style="
+        font-family: &quot;Courier New&quot;, Courier, monospace;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        margin: 30px 0 30px 20px;
+        max-width: 500px;
+        align: left;
+        background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
+        padding: 20px; /* space inside rectangle */
+        border-radius: 10px; /* optional rounded corners */
+      "
+    >
+      I compliled a list of all the expences we had on our trip to New York
+      City. This includes transportation, food, and activities.
+    </p>
+
+    <div
+      style="
+        width: 400px;
+        margin: 30px 0 30px 20px; /* left side of page */
+        font-family: &quot;Courier New&quot;, monospace;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+      "
+    >
+      <h3 style="text-align: left; margin-top: 0">Trip Expenses</h3>
+
+      <div style="display: grid; grid-template-columns: 1fr auto; row-gap: 8px">
+        <span>Car Rental</span> <span>$800</span> <span>Toll Road</span>
+        <span>$80</span> <span>Food & Drinks</span> <span>$300</span>
+        <span>Gas</span> <span>$340</span> <span>AirBnB (Lodging)</span>
+        <span>$1,920</span> <span>City Transportation</span> <span>$165</span>
+        <span>Staten Island Ferry</span> <span>$40</span> <span>Parking</span>
+        <span>$50</span> <span>Passports</span> <span>$850</span>
+
+        <hr
+          style="
+            grid-column: 1 / span 2;
+            border: 0;
+            border-top: 1px solid white;
+            margin: 10px 0;
+          "
+        />
+
+        <span style="font-weight: bold">Total</span>
+        <span style="font-weight: bold">$4,545</span>
+      </div>
+  </body>
+</html>
