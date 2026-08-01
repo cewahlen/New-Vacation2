@@ -6,16 +6,26 @@
     <title>Vacation 2026</title>
     <style>
       body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        color: white;
+      }
+      .error {
+        color: red;
+      }
+      .success {
+        color: green;
+      }
+      body {
         background-image: url("new-york-city-skyline-.jpg");
         background-size: cover; /* makes the image fill the screen */
         background-repeat: no-repeat;
         background-position: center;
       }
-
     </style>
   </head>
   <body>
-   <h1
+    <h1
       style="
         font-family: &quot;Courier New&quot;, Courier, monospace;
         font-size: 60px;
@@ -26,7 +36,7 @@
     >
       Vacation 2026
     </h1>
-    
+
     <p
       style="
         font-family: &quot;Courier New&quot;, Courier, monospace;
@@ -50,7 +60,7 @@
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 10px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners
-      ''
+      '
     >
       <a
         href="Transportation page.html"
@@ -60,8 +70,8 @@
       </a>
     </p>
     <p
-      style="
-        font-family: &quot;Courier New&quot;, Courier, monospace;
+      style='
+        font-family: "Courier New", Courier, monospace;
         font-size: 20px;
         color: white;
         font-weight: bold;
@@ -70,19 +80,18 @@
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 10px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners
-      "
+      '
     >
       <a
         href="Accomodation page.html"
         style="color: white; text-decoration: underline"
-        >
-      Accommodation
+      >
+        Accommodation
       </a>
-
     </p>
     <p
-      style="
-        font-family: &quot;Courier New&quot;, Courier, monospace;
+      style='
+        font-family: "Courier New", Courier, monospace;
         font-size: 20px;
         color: white;
         font-weight: bold;
@@ -91,20 +100,18 @@
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 10px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners
-      "
-  
+      '
     >
       <a
         href="Activities.html"
         style="color: white; text-decoration: underline"
-        >
-      Activities
+      >
+        Activities
       </a>
-
     </p>
     <p
-      style="
-        font-family: &quot;Courier New&quot;, Courier, monospace;
+      style='
+        font-family: "Courier New", Courier, monospace;
         font-size: 20px;
         color: white;
         font-weight: bold;
@@ -113,18 +120,15 @@
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 10px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners
-      "
+      '
     >
-      <a
-        href="Food.html"
-        style="color: white; text-decoration: underline"
-        >
-      Food
+      <a href="Food.html" style="color: white; text-decoration: underline">
+        Food
       </a>
     </p>
     <p
-      style="
-        font-family: &quot;Courier New&quot;, Courier, monospace;
+      style='
+        font-family: "Courier New", Courier, monospace;
         font-size: 20px;
         color: white;
         font-weight: bold;
@@ -133,14 +137,15 @@
         background: rgba(0, 0, 0, 0.6); /* rectangle behind text */
         padding: 10px; /* space inside rectangle */
         border-radius: 10px; /* optional rounded corners
-      "
+      '
     >
       <a
         href="ConsolateVisit.html"
         style="color: white; text-decoration: underline"
-        >
-      Consulate Visit
+      >
+        Consulate Visit
       </a>
+    </p>
     <p
       style='
         font-family: "Courier New", Courier, monospace;
@@ -158,5 +163,65 @@
         Expences
       </a>
     </p>
+    <h2>User Information Form</h2>
+
+    <!-- HTML Form -->
+    <form id="userForm">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="age">Age:</label><br />
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="1"
+        max="120"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Message Output -->
+    <p id="message"></p>
+
+    <script>
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting to a server
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const age = parseInt(document.getElementById("age").value.trim(), 10);
+          const messageEl = document.getElementById("message");
+
+          // Basic validation
+          if (!name || !email || isNaN(age)) {
+            messageEl.textContent = "Please fill in all fields correctly.";
+            messageEl.className = "error";
+            return;
+          }
+
+          // Email format check (extra safety)
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            messageEl.textContent = "Invalid email format.";
+            messageEl.className = "error";
+            return;
+          }
+
+          // Process data (example: display it)
+          messageEl.textContent = `Hello ${name}, your email is ${email} and you are ${age} years old.`;
+          messageEl.className = "success";
+
+          // Optional: reset form after success
+          // document.getElementById('userForm').reset();
+        });
+    </script>
   </body>
 </html>
